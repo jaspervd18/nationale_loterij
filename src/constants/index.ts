@@ -1,3 +1,5 @@
+import { facebook, instagram } from "@/assets";
+
 const causes = [
   {
     title: "Make a Wish",
@@ -43,4 +45,17 @@ const causes = [
   },
 ];
 
-export { causes };
+const socials = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/Klauwaerts/?locale=nl_BE",
+    icon: facebook,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/deklauwaerts/",
+    icon: instagram,
+  },
+];
+
+export { causes, socials };

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import "./index.css";
 import About from "./components/About";
 import Vote from "./components/Vote";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
