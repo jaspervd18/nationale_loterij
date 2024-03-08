@@ -13,13 +13,13 @@ function Navbar() {
           <div className="text-md lg:flex-grow">
             <Link
               to="/about"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:font-bold mx-8 text-center transition-all duration-100 ease-in-out"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:scale-105 mx-8 text-center"
             >
               About
             </Link>
             <Link
               to="/vote"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:font-bold mx-8 text-center transition-all duration-100 ease-in-out"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:scale-105 mx-8 text-center"
             >
               Vote
             </Link>
