@@ -19,7 +19,7 @@ function Vote() {
           for your favorite cause to receive extra funding.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16">
         {causes.map((cause, index) => (
           <Card className="shadow-md" key={index}>
             <CardHeader>
