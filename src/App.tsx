@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <div className="bg-slate-50">
-        <div className="container py-16 grow">
+        <div className="container md:py-8 grow">
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/about" element={<About />} />
