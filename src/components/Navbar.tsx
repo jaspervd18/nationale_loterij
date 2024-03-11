@@ -24,7 +24,7 @@ function Navbar() {
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
         <div
-          className={cn(isOpen? "block":"hidden", "w-full md:flex md:items-center md:w-auto")}
+          className={cn(isOpen ? "block" : "hidden", "w-full md:flex md:items-center md:w-auto")}
         >
           <div className="text md:text-base md:flex-grow">
             <Link
