@@ -66,3 +66,18 @@ function About() {
 }
 
 export default About;
+
+// How does buying a lottery ticket help community causes?
+// A: A portion of the proceeds from every ticket sold goes towards supporting community causes that are chosen by players. By playing the lottery, you can make a positive impact on your community and support causes that matter to you.
+
+// Is gambling a safe and responsible activity?
+// A: Gambling can be a fun and entertaining activity, but it's important to approach it in a responsible way. We encourage all players to set limits on their spending, to know when to stop, and to seek help if they feel that gambling is becoming a problem.
+
+// How do you ensure the integrity and fairness of the lottery?
+// A: We use state-of-the-art technology and rigorous security measures to ensure that all lottery games are fair and unbiased. Our games are regularly audited by independent third-party organizations to ensure that the results are truly random and that players have an equal chance of winning.
+
+// Can anyone participate in community causes, or do you have to be a winner?
+// A: Anyone who buys a lottery ticket can participate in choosing community causes to support. You don't have to be a winner to make a difference in your community - every ticket sold helps to support important causes.
+
+// How can I find out which community causes are being supported?
+// A: We regularly update our website and social media channels with information about the community causes that are being supported. You can also check your local news sources to find out about the impact that lottery proceeds are having in your community.
