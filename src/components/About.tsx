@@ -1,8 +1,34 @@
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+
 function About() {
+
+  const [is18, setIs18] = useState(false);
+
+  useEffect(() => {
+    console.log(is18);
+  }, [is18]);
+
   return (
     <>
       <div>
-        <h1 className="text-4xl font-bold text-center">About</h1>
+        <div className={cn(is18 ? "hidden" : "block", "flex flex-col sm:flex-row md:gap-4")}>
+          <p className="text-6xl md:text-9xl font-bold">18+</p>
+          <div className="flex flex-col justify-between my-4">
+              <p className="text-lg text-left my-auto">
+                To participate in the National Lottery, you must be at least 18 years
+                old and provide consent. By entering the lottery, you confirm that you
+                meet the age requirement and agree to the terms and conditions.
+              </p>
+              <Button className="mt-4 w-full md:w-fit" 
+                onClick={() => {
+                  setIs18(true); 
+                  console.log(is18);
+                }
+              }>I understand</Button>
+          </div>
+        </div>
         <p className="text-center mt-8 text-lg">
           The National Lottery website is dedicated to providing an exciting and
           rewarding experience for its users. At the heart of this website is
@@ -33,11 +59,7 @@ function About() {
           thrill of winning with the joy of supporting a cause close to your
           heart.
         </p>
-        <p className="text-center mt-8 text-lg">
-          To participate in the National Lottery, you must be at least 18 years
-          old and provide consent. By entering the lottery, you confirm that you
-          meet the age requirement and agree to the terms and conditions.
-        </p>
+        
       </div>
     </>
   );
