@@ -10,4 +10,6 @@ import redCross from "./red-cross.png";
 import saveTheChildren from "./save-the-children.png";
 import unicef from "./unicef.png";
 
-export { logo, facebook, instagram, wwf, cancerResearch, makeAWish, oxfam, redCross, saveTheChildren, unicef};
+import krasloten from "./krasloten.jpeg";
+
+export { logo, facebook, instagram, wwf, cancerResearch, makeAWish, oxfam, redCross, saveTheChildren, unicef, krasloten};
