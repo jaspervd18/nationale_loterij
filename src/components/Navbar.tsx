@@ -29,25 +29,28 @@ function Navbar() {
           <div className="text md:text-base md:flex-grow">
             <Link
               to="/"
-              className="block mt-4 md:inline-block md:mt-0 mx-8 text-center hover:scale-105"
+              className="block mt-4 md:inline-block md:mt-0 mx-6 text-center hover:scale-105"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link
               to="/vote"
-              className="block mt-4 md:inline-block md:mt-0 mx-8 text-center hover:scale-105"
+              className="block mt-4 md:inline-block md:mt-0 mx-6 text-center hover:scale-105"
               onClick={toggleMenu}
             >
               Vote
             </Link>
             <Link
               to="/ranking"
-              className="block mt-4 md:inline-block md:mt-0 mx-8 text-center hover:scale-105"
+              className="block mt-4 md:inline-block md:mt-0 mx-6 text-center hover:scale-105"
               onClick={toggleMenu}
             >
               Ranking
             </Link>
+            <div className="block mt-4 md:inline-block md:mt-0 mx-6 text-center">
+              Remaining points: <span className="font-bold">56</span>
+            </div>
           </div>
         </div>
       </nav>
