@@ -17,6 +17,7 @@ import {
   DrawerTrigger,
 } from "./ui/drawer";
 import { useState } from "react";
+import { HeartIcon } from "lucide-react";
 
 type Cause = {
   title: string;
@@ -57,7 +58,10 @@ function Vote() {
             {causes.map((cause, index) => (
               <Card className="shadow-md flex flex-col justify-between" key={index}>
                 <CardHeader>
-                  <CardTitle>{cause.title}</CardTitle>
+                  <CardTitle className="flex justify-between">
+                    <span>{cause.title}</span>
+                    <span className="flex items-center text-xs font-light">{cause.likes}<HeartIcon className="h-4 w-4 ml-1 hover:cursor-pointer"/></span>
+                  </CardTitle>
                   <CardDescription>{cause.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="flex justify-end">
