@@ -12,7 +12,7 @@ function Ranking() {
                     Good luck!
                 </p>
             </div>
-            <div className="shadow-md rounded-sm w-1/2 my-16">
+            <div className="shadow-lg rounded-sm w-1/2 my-16">
                 <div className="flex justify-around font-semibold py-3 rounded-t-sm border-b border-primary bg-primary text-white">
                     <p>Rank</p>
                     <p>Username</p>
