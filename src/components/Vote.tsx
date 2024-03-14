@@ -52,10 +52,23 @@ function Vote() {
                     <p className="w-7/12 text-center border-r border-black my-2">{points}</p>
                     <div className="flex flex-col mx-auto ">
                       <span>
-                        <ArrowUp className="h-4 w-4 hover:cursor-pointer" onClick={() => {setRemainingPoints(remainingPoints - 5); setPoints(points + 5)}}/>
+                        <ArrowUp 
+                          className="h-4 w-4 hover:cursor-pointer" 
+                          onClick={() => {
+                            if (remainingPoints < 5) return;
+                            setRemainingPoints(remainingPoints - 5); 
+                            setPoints(points + 5)
+                          }}
+                        />
                       </span>
                       <span>
-                        <ArrowDown className="h-4 w-4 hover:cursor-pointer" onClick={() => {setRemainingPoints(remainingPoints + 5); setPoints(points - 5)}}/>
+                        <ArrowDown 
+                          className="h-4 w-4 hover:cursor-pointer" 
+                          onClick={() => {
+                            if (points <= 0) return;
+                            setRemainingPoints(remainingPoints + 5); 
+                            setPoints(points - 5)}}
+                          />
                       </span>
                     </div>
                   </div>
