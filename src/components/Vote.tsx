@@ -17,7 +17,9 @@ import {
   DrawerTrigger,
 } from "./ui/drawer";
 import { useState } from "react";
-import { HeartIcon } from "lucide-react";
+import { ArrowDown, ArrowUp, HeartIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 type Cause = {
   title: string;
@@ -26,24 +28,41 @@ type Cause = {
 };
 
 function Vote() {
+  const navigate = useNavigate();
 
   const [cause, setCause] = useState<Cause | null>(null);
+  const [remainingPoints, setRemainingPoints] = useState<number>(56);
+  const [points, setPoints] = useState<number>(0);
 
   return (
     <>
       <Drawer>
         <DrawerContent>
             <div className="mx-auto w-full max-w-sm py-4">
-              <DrawerHeader className="gap-4">
-                <img src={cause?.image}></img>
+              <DrawerHeader>
+                <img src={cause?.image} className="h-3/4 mx-auto mb-0"></img>
                 <DrawerDescription>
                   {cause?.description}
                 </DrawerDescription>
               </DrawerHeader>
               <DrawerFooter>
-                <DrawerClose>
-                  <Button className="w-full">I choose this community cause</Button>
-                </DrawerClose>
+                <p>Remaining points: <span className="font-bold">{remainingPoints}</span></p>
+                <div className="flex gap-2 justify-between w-full">
+                  <div className="flex items-center border border-black rounded-sm w-4/12">
+                    <p className="w-7/12 text-center border-r border-black my-2">{points}</p>
+                    <div className="flex flex-col mx-auto ">
+                      <span>
+                        <ArrowUp className="h-4 w-4 hover:cursor-pointer" onClick={() => {setRemainingPoints(remainingPoints - 5); setPoints(points + 5)}}/>
+                      </span>
+                      <span>
+                        <ArrowDown className="h-4 w-4 hover:cursor-pointer" onClick={() => {setRemainingPoints(remainingPoints + 5); setPoints(points - 5)}}/>
+                      </span>
+                    </div>
+                  </div>
+                  <DrawerClose>
+                    <Button className={cn(points <= 0 ? "bg-gray-300 hover:bg-gray-300 hover:cursor-not-allowed" : "hover:bg-green-700", "w-full h-full ")} onClick={() => navigate("/ranking")}>I choose this community cause</Button>
+                  </DrawerClose>
+                </div>
               </DrawerFooter>
             </div>
           </DrawerContent>
