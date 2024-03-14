@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import {  useNavigate } from "react-router-dom";
 import FAQ from "./FAQ";
 
-function About() {
+function Home() {
 
   const navigate = useNavigate();
 
@@ -59,8 +59,8 @@ function About() {
         We believe in transparency and accountability, which is why we provide
         regular updates on the impact your contributions have made. Through
         our website, you can track the progress of the supported causes, learn
-        about the projects they undertake, and see the positive change they
-        bring about.
+        Home the projects they undertake, and see the positive change they
+        bring Home.
       </p>
       <p className="text-center mt-8 text-lg">
         In addition to the satisfaction of knowing that you are making a
@@ -77,5 +77,5 @@ function About() {
   );
 }
 
-export default About;
+export default Home;
 
