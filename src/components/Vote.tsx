@@ -9,7 +9,6 @@ import {
 } from "./ui/card";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
@@ -19,7 +18,6 @@ import {
 import { useState } from "react";
 import { ArrowDown, ArrowUp, HeartIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { cn } from "@/lib/utils";
 
 type Cause = {
   title: string;
