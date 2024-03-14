@@ -28,11 +28,11 @@ function Navbar() {
         >
           <div className="text md:text-base md:flex-grow">
             <Link
-              to="/home"
+              to="/"
               className="block mt-4 md:inline-block md:mt-0 mx-8 text-center hover:scale-105"
               onClick={toggleMenu}
             >
-              About
+              Home
             </Link>
             <Link
               to="/vote"
