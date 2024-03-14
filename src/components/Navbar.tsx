@@ -41,6 +41,13 @@ function Navbar() {
             >
               Vote
             </Link>
+            <Link
+              to="/vote"
+              className="block mt-4 md:inline-block md:mt-0 mx-8 text-center hover:scale-105"
+              onClick={toggleMenu}
+            >
+              Ranking
+            </Link>
           </div>
         </div>
       </nav>
