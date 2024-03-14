@@ -72,9 +72,12 @@ function Vote() {
                       </span>
                     </div>
                   </div>
-                  <DrawerClose>
-                    <Button className={cn(points <= 0 ? "bg-gray-300 hover:bg-gray-300 hover:cursor-not-allowed" : "hover:bg-green-700", "w-full h-full ")} onClick={() => navigate("/ranking")}>I choose this community cause</Button>
-                  </DrawerClose>
+                  
+                    {points > 0 ? 
+                        <Button  onClick={() => navigate("/ranking")}>I choose this community cause</Button>
+                     :
+                      <Button disabled>I choose this community cause</Button> 
+                    }
                 </div>
               </DrawerFooter>
             </div>
