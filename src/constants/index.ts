@@ -93,4 +93,55 @@ const faq = [
   },
 ];
 
-export { causes, socials, faq };
+const ranking = [
+  {
+    name: "John Doe",
+    amount: 100,
+  },
+  {
+    name: "Jane Smith",
+    amount: 75,
+  },
+  {
+    name: "Robert Johnson",
+    amount: 50,
+  },
+  {
+    name: "Emily Davis",
+    amount: 25,
+  },
+  {
+    name: "Michael Brown",
+    amount: 10,
+  },
+  {
+    name: "Olivia Wilson",
+    amount: 354,
+  },
+  {
+    name: "William Taylor",
+    amount: 212,
+  },
+  {
+    name: "Sophia Martinez",
+    amount: 123,
+  },
+  {
+    name: "James Anderson",
+    amount: 76,
+  },
+  {
+    name: "Isabella Thomas",
+    amount: 32,
+  },
+  {
+    name: "David Hernandez",
+    amount: 12,
+  },
+  {
+    name: "Mia Lopez",
+    amount: 5,
+  },
+];
+
+export { causes, socials, faq, ranking };
