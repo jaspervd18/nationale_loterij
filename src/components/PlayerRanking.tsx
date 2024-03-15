@@ -17,7 +17,7 @@ function PlayerRanking() {
               key={index}
               className={cn(
                 index % 2 == 0 ? "bg-gray-50" : "bg-white",
-                "flex justify-between py-2 px-24"
+                "flex justify-between py-2 px-24 hover:scale-105 transition duration-300 ease-in-out"
               )}
             >
               <p className="text-center font-bold">{index + 1}</p>
@@ -25,7 +25,7 @@ function PlayerRanking() {
               <p className="text-center">{user.amount}</p>
             </div>
           ))}
-        <div className="bg-gray-50 flex justify-between py-1 px-24">
+        <div className="bg-gray-50 flex justify-between py-1 px-24 hover:scale-105 transition duration-300 ease-in-out">
           <p className="text-center">...</p>
           <p className="text-center">...</p>
           <p className="text-center">...</p>

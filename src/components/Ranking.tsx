@@ -1,7 +1,6 @@
-import { BadgeCent } from "lucide-react";
 import Countdown from "./Countdown";
 import PlayerRanking from "./PlayerRanking";
-import { Card, CardContent, CardTitle } from "./ui/card";
+import Achievements from "./Achievements";
 
 function Ranking() {
   const targetDate = new Date(
@@ -30,21 +29,7 @@ function Ranking() {
             <Countdown targetDate={targetDate} />
           </div>
           <div className="">
-            <Card>
-              <CardTitle className="text-center my-6">Achievements</CardTitle>
-              <CardContent>
-                <div className="flex flex-row gap-2 justify-around">
-                  <div className="relative w-16 h-16 bg-primary rounded-3xl transform rotate-45">
-                    <div className="absolute inset-0 flex justify-center items-center">
-                      <BadgeCent
-                        className="text-white transform -rotate-45"
-                        size={48}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <Achievements />
           </div>
         </div>
       </div>
