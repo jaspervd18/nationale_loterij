@@ -20,11 +20,11 @@ function Ranking() {
           Good luck!
         </p>
       </div>
-      <div className="flex gap-2 my-16">
+      <div className="flex gap-4 my-16">
         <div className="shadow-lg rounded-sm w-1/2">
           <PlayerRanking />
         </div>
-        <div className="w-1/2 flex flex-col gap-2">
+        <div className="w-1/2 flex flex-col gap-4">
           <div>
             <Countdown targetDate={targetDate} />
           </div>

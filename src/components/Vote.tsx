@@ -18,6 +18,8 @@ import {
 import { useState } from "react";
 import { ArrowDown, ArrowUp, HeartIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Input } from "./ui/input";
+import { Badge } from "./ui/badge";
 
 type Cause = {
   title: string;
@@ -93,7 +95,18 @@ function Vote() {
             for your favorite cause to receive extra funding.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16">
+        <div className="flex flex-row gap-2 mt-16">
+          <Input
+            className="px-4 w-1/4 bg-white h-12"
+            placeholder="Search for a cause..."
+          />
+          <Badge>Charity</Badge>
+          <Badge>Education</Badge>
+          <Badge>Healthcare</Badge>
+          <Badge>KMO</Badge>
+          <Badge>Sport</Badge>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 mt-4">
           {causes.map((cause, index) => (
             <Card
               className="shadow-md flex flex-col justify-between"
