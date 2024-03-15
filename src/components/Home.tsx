@@ -50,7 +50,7 @@ function Home() {
           <img src={krasloten} alt="krasloten" className="w-9/12 rounded-sm" />
           <Card className="w-full flex flex-col justify-between">
             <CardHeader className="text-center">
-              <CardTitle>Remaining points</CardTitle>
+              <CardTitle>Remaining votes</CardTitle>
             </CardHeader>
             <CardContent className="text-9xl font-bold text-center">
               56<span className="text-lg font-light ml-0">pts.</span>

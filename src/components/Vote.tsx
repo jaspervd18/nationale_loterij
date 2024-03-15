@@ -43,7 +43,7 @@ function Vote() {
             </DrawerHeader>
             <DrawerFooter>
               <p>
-                Remaining points:{" "}
+                Remaining votes:{" "}
                 <span className="font-bold">{remainingPoints}</span>
               </p>
               <div className="flex gap-2 justify-between w-full">
