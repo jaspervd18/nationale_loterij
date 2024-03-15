@@ -1,7 +1,13 @@
 import { Button } from "./ui/button";
 import { krasloten } from "@/assets";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
-import {  useNavigate } from "react-router-dom";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { useNavigate } from "react-router-dom";
 import FAQ from "./FAQ";
 import {
   Drawer,
@@ -16,7 +22,6 @@ import {
 import { Input } from "./ui/input";
 
 function Home() {
-
   const navigate = useNavigate();
 
   return (
@@ -29,7 +34,8 @@ function Home() {
                 Enter a code
               </DrawerTitle>
               <DrawerDescription>
-                Can't find your code? Don't forget to look at the back of your lottery ticket.
+                Can't find your code? Don't forget to look at the back of your
+                lottery ticket.
               </DrawerDescription>
             </DrawerHeader>
             <Input className="px-4" placeholder="0123-456-789"></Input>
@@ -41,7 +47,7 @@ function Home() {
           </div>
         </DrawerContent>
         <div className="flex gap-4 flex-row items-stretch">
-          <img src={krasloten} alt="krasloten" className="w-9/12 rounded-sm"/>
+          <img src={krasloten} alt="krasloten" className="w-9/12 rounded-sm" />
           <Card className="w-full flex flex-col justify-between">
             <CardHeader className="text-center">
               <CardTitle>Remaining points</CardTitle>
@@ -51,13 +57,20 @@ function Home() {
             </CardContent>
             <CardFooter className="flex flex-col">
               <DrawerTrigger asChild>
-                <p className="text-gray-400 underline underline-offset-2 mb-2 text-sm hover:cursor-pointer">Need more points? Enter a code here.</p>
+                <p className="text-gray-400 underline underline-offset-2 mb-2 text-sm hover:cursor-pointer">
+                  Need more points? Enter a code here.
+                </p>
               </DrawerTrigger>
-              <Button className="w-full text-2xl py-8" onClick={() => navigate("/vote")}>Choose your cause</Button>
+              <Button
+                className="w-full text-2xl py-8"
+                onClick={() => navigate("/vote")}
+              >
+                Choose your cause
+              </Button>
             </CardFooter>
           </Card>
         </div>
-        
+
         <FAQ />
       </Drawer>
     </>
@@ -65,4 +78,3 @@ function Home() {
 }
 
 export default Home;
-

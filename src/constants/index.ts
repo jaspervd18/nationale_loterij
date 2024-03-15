@@ -1,4 +1,14 @@
-import { facebook, instagram, wwf, makeAWish, unicef, saveTheChildren, redCross, oxfam, cancerResearch } from "@/assets";
+import {
+  facebook,
+  instagram,
+  wwf,
+  makeAWish,
+  unicef,
+  saveTheChildren,
+  redCross,
+  oxfam,
+  cancerResearch,
+} from "@/assets";
 
 const causes = [
   {
@@ -82,7 +92,8 @@ const faq = [
       "We use state-of-the-art technology and rigorous security measures to ensure that all lottery games are fair and unbiased. Our games are regularly audited by independent third-party organizations to ensure that the results are truly random and that players have an equal chance of winning.",
   },
   {
-    question: "Can anyone participate in community causes, or do you have to be a winner?",
+    question:
+      "Can anyone participate in community causes, or do you have to be a winner?",
     answer:
       "Anyone who buys a lottery ticket can participate in choosing community causes to support. You don't have to be a winner to make a difference in your community - every ticket sold helps to support important causes.",
   },
