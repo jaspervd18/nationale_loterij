@@ -4,7 +4,7 @@ import Countdown from "./Countdown";
 
 function Ranking() {
 
-    const targetDate = new Date('March 30, 2024 23:59:59');
+    const targetDate = new Date( new Date().getFullYear(), new Date().getMonth() + 1, 0);
 
     return (
         <>
