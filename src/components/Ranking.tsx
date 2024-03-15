@@ -1,7 +1,11 @@
 import { ranking } from "@/constants";
 import { cn } from "@/lib/utils";
+import Countdown from "./Countdown";
 
 function Ranking() {
+
+    const targetDate = new Date('March 30, 2024 23:59:59');
+
     return (
         <>
             <div>
@@ -12,7 +16,8 @@ function Ranking() {
                     Good luck!
                 </p>
             </div>
-            <div className="shadow-lg rounded-sm w-1/2 my-16">
+            <div className="flex gap-2 my-16">
+                <div className="shadow-lg rounded-sm w-1/2">
                 <div className="flex justify-around font-semibold py-3 rounded-t-sm border-b border-primary bg-primary text-white">
                     <p>Rank</p>
                     <p>Username</p>
@@ -27,12 +32,17 @@ function Ranking() {
                         </div>
                     ))}
                     <div className="bg-gray-100 flex justify-between py-1 px-24">
-                            <p className="text-center">...</p>
-                            <p className="text-center">...</p>
-                            <p className="text-center">...</p>
+                        <p className="text-center">...</p>
+                        <p className="text-center">...</p>
+                        <p className="text-center">...</p>
                     </div>
                 </div>
+                </div>
+                <div className="w-1/2">
+                    <Countdown targetDate={targetDate} />
+                </div>
             </div>
+            
         </>
     )
 }
