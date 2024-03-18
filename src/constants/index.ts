@@ -8,6 +8,9 @@ import {
   redCross,
   oxfam,
   cancerResearch,
+  acid,
+  averageRob,
+  floWindey,
 } from "@/assets";
 
 const causes = [
@@ -104,6 +107,27 @@ const faq = [
   },
 ];
 
+const exampleRanking = [
+  {
+    title: "Plant 10.000 trees with the help of disabled people",
+    cause: "WWF, Oxfam",
+    votes: 1200,
+    collaborators: "Average Rob",
+  },
+  {
+    title: "A thousand blind guiding dogs cuddling with orphans",
+    cause: "Make a Wish, Save the Children",
+    votes: 1167,
+    collaborators: "Acid",
+  },
+  {
+    title: "10.000 children have their own theme park for a day",
+    cause: "Make a Wish, Save the Children",
+    votes: 987,
+    collaborators: "Flo Windey",
+  }
+];
+
 const ranking = [
   {
     name: "John Doe",
@@ -155,4 +179,19 @@ const ranking = [
   },
 ];
 
-export { causes, socials, faq, ranking };
+const collaborators = [
+  {
+    name: "Average Rob",
+    image: averageRob,
+  },
+  {
+    name: "Acid",
+    image: acid,
+  },
+  {
+    name: "Flo Windey",
+    image: floWindey,
+  },
+];
+
+export { causes, socials, faq, exampleRanking, ranking, collaborators };

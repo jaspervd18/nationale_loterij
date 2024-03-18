@@ -56,7 +56,7 @@ function Navbar() {
               Ranking
             </Link>
             <div className="block mt-4 md:inline-block md:mt-0 mx-6 text-center">
-              Remaining votes: <span className="font-bold">56</span>
+              Remaining votes: <span className="font-bold">4</span>
             </div>
           </div>
         </div>
