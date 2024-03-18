@@ -77,7 +77,7 @@ function Steps() {
               <div className="shadow-md rounded-sm w-full">
                 <div className="flex justify-between px-24 font-semibold py-3 rounded-t-sm border-b border-primary bg-primary text-white">
                   <p>Rank</p>
-                  <p>Title</p>
+                  <p>Video</p>
                   <p>Votes</p>
                 </div>
                 <div className="flex flex-col">
