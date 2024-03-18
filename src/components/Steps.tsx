@@ -13,13 +13,14 @@ import { exampleRanking } from "@/constants";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
-function Hero() {
+function Steps() {
   const navigate = useNavigate();
 
   const [remaingingVotes, setRemainingVotes] = useState(4);
 
   return (
     <>
+        <h1 className="text-4xl font-semibold mb-4">How does it work?</h1>
         <div className="flex flex-row gap-4">
           <div>
             <h2 className="font-semibold text-xl text-black mb-4">
@@ -109,4 +110,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Steps;

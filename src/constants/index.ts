@@ -80,33 +80,32 @@ const socials = [
 
 const faq = [
   {
-    question: "How does buying a lottery ticket help community causes?",
+    question: "How does buying a lottery ticket support community causes?",
     answer:
-      "A portion of the proceeds from every ticket sold goes towards supporting community causes that are chosen by players. By playing the lottery, you can make a positive impact on your community and support causes that matter to you.",
+      "A portion of the proceeds from every ticket sold goes towards supporting community causes that are chosen by players. Additionally, we will feature crazy video ideas linked to one or more causes, and players can vote for their favorite idea. At the end of the month, we will make the video using a famous influencer, and donate the profits from the game to the chosen cause(s). By playing the lottery, you can make a positive impact on your community and support causes that matter to you.",
   },
   {
-    question: "Is gambling a safe and responsible activity?",
+    question: "Is participating in the lottery a safe and responsible activity?",
     answer:
-      "Gambling can be a fun and entertaining activity, but it's important to approach it in a responsible way. We encourage all players to set limits on their spending, to know when to stop, and to seek help if they feel that gambling is becoming a problem.",
+      "Participating in the lottery can be a fun and entertaining activity, but it's important to approach it in a responsible way. We encourage all players to set limits on their spending, to know when to stop, and to seek help if they feel that gambling is becoming a problem. We also encourage players to support causes that align with their values and beliefs.",
   },
   {
     question: "How do you ensure the integrity and fairness of the lottery?",
     answer:
-      "We use state-of-the-art technology and rigorous security measures to ensure that all lottery games are fair and unbiased. Our games are regularly audited by independent third-party organizations to ensure that the results are truly random and that players have an equal chance of winning.",
+      "We use state-of-the-art technology and rigorous security measures to ensure that all lottery games are fair and unbiased. Our games are regularly audited by independent third-party organizations to ensure that the results are truly random and that players have an equal chance of winning. We are committed to maintaining the highest standards of integrity and fairness in all aspects of our operations.",
   },
   {
     question:
-      "Can anyone participate in community causes, or do you have to be a winner?",
+      "Can anyone participate in supporting community causes, or do you have to be a winner?",
     answer:
-      "Anyone who buys a lottery ticket can participate in choosing community causes to support. You don't have to be a winner to make a difference in your community - every ticket sold helps to support important causes.",
+      "Anyone who buys a lottery ticket can participate in supporting community causes. You don't have to be a winner to make a difference in your community - every ticket sold helps to support important causes. Additionally, players can vote for their favorite crazy video idea linked to one or more causes, and the profits from the game will be donated to the chosen cause(s).",
   },
   {
     question: "How can I find out which community causes are being supported?",
     answer:
-      "We regularly update our website and social media channels with information about the community causes that are being supported. You can also check your local news sources to find out about the impact that lottery proceeds are having in your community.",
+      "We regularly update our website and social media channels with information about the community causes that are being supported. You can also check your local news sources to find out about the impact that lottery proceeds are having in your community. Additionally, we will feature crazy video ideas linked to one or more causes, and players can vote for their favorite idea. At the end of the month, we will make the video using a famous influencer, and donate the profits from the game to the chosen cause(s).",
   },
 ];
-
 const exampleRanking = [
   {
     title: "Plant 10.000 trees with the help of disabled people",
