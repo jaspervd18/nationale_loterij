@@ -9,8 +9,7 @@ import {
 function FAQ() {
   return (
     <>
-      <h2 className="text-2xl font-bold mt-8">Frequently asked questions</h2>
-
+      <h2 className="text-4xl font-semibold mb-4">Frequently asked questions</h2>
       <Accordion type="single" collapsible>
         {faq.map((item, index) => {
           return (

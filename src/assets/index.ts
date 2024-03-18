@@ -15,5 +15,7 @@ import krasloten from "./krasloten.jpeg";
 import acid from "./acid.jpg";
 import averageRob from "./average-rob.jpg";
 import floWindey from "./flo-windey.jpg";
+import gloriaMonserez from "./gloria-monserez.jpg";
+import arnoTheKid from "./arno-the-kid.jpg";
 
-export { logo, facebook, instagram, wwf, cancerResearch, makeAWish, oxfam, redCross, saveTheChildren, unicef, krasloten, acid, averageRob, floWindey};
+export { logo, facebook, instagram, wwf, cancerResearch, makeAWish, oxfam, redCross, saveTheChildren, unicef, krasloten, acid, averageRob, floWindey, gloriaMonserez, arnoTheKid};

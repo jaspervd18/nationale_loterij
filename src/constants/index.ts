@@ -11,6 +11,8 @@ import {
   acid,
   averageRob,
   floWindey,
+  gloriaMonserez,
+  arnoTheKid,
 } from "@/assets";
 
 const causes = [
@@ -190,6 +192,14 @@ const collaborators = [
   {
     name: "Flo Windey",
     image: floWindey,
+  },
+  {
+    name: "Gloria Monserez",
+    image: gloriaMonserez,
+  },
+  {
+    name: "Arno The Kid",
+    image: arnoTheKid,
   },
 ];
 
