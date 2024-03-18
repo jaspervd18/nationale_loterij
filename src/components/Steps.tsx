@@ -60,7 +60,7 @@ function Steps() {
           <h2 className="font-semibold text-xl text-black mb-4">
             <span className="inline border-b-4 border-primary pb-1">Step 3.</span> Vote for your cause
           </h2>
-          <Card className="shadow-md px-4 py-4">
+          <Card className="shadow-md px-4 py-4 pb-0">
             <CardContent className="flex gap-4">
               <div className="flex flex-col gap-4 w-5/12 justify-between">
                 <p>
