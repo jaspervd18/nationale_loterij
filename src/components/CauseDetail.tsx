@@ -14,7 +14,7 @@ interface CauseDetailProps {
   image: string;
 }
 
-function CauseDetail({ title, description, image }: CauseDetailProps) {
+function CauseDetail({ description, image }: CauseDetailProps) {
   const [remainingVotes, setRemainingVotes] = useState<number>(4);
   const [votes, setVotes] = useState<number>(0);
   return (
