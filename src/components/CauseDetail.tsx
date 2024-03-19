@@ -1,13 +1,11 @@
 import { ArrowDown, ArrowUp } from "lucide-react";
 import {
   DrawerClose,
-  DrawerContent,
   DrawerDescription,
   DrawerFooter,
   DrawerHeader,
 } from "./ui/drawer";
 import { Button } from "./ui/button";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 interface CauseDetailProps {
@@ -17,8 +15,6 @@ interface CauseDetailProps {
 }
 
 function CauseDetail({ title, description, image }: CauseDetailProps) {
-  const navigate = useNavigate();
-
   const [remainingVotes, setRemainingVotes] = useState<number>(4);
   const [votes, setVotes] = useState<number>(0);
   return (
@@ -28,11 +24,9 @@ function CauseDetail({ title, description, image }: CauseDetailProps) {
           <img src={image} className="h-3/4 mx-auto mb-0"></img>
           <DrawerDescription>{description}</DrawerDescription>
         </DrawerHeader>
-        <div className="">
-          <h3>
-            <span>It looks like your cause doesn't have any video ideas</span>
+        <div className="mx-4">
+            <p>Your cause doesn't have a video idea.</p>
             <Button variant={"secondary"}>Send your idea</Button>
-          </h3>
         </div>
         <DrawerFooter>
           <p>
