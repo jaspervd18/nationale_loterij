@@ -9,7 +9,7 @@ import {
 } from "./ui/card";
 import { useNavigate } from "react-router-dom";
 import { Input } from "./ui/input";
-import { exampleRanking } from "@/constants";
+import { videoIdeas } from "@/constants";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
@@ -74,7 +74,9 @@ function Steps() {
               <p>
                 Choose a cause that you'd like to support. The more votes a
                 cause gets, the more likely we will make a crazy video about it.
-                Even if your cause doesn't win, we'll still donate to it.
+                Even if your cause doesn't win, we'll still donate to it. At the
+                end of the month, we'll announce the winning cause and the video
+                idea that we'll bring to life.
               </p>
               <Button
                 className="w-full py-6 px-8 text-2xl"
@@ -90,7 +92,7 @@ function Steps() {
                 <p>Votes</p>
               </div>
               <div className="flex flex-col">
-                {exampleRanking
+                {videoIdeas
                   .sort((u1, u2) => u2.votes - u1.votes)
                   .map((user, index) => (
                     <div

@@ -7,6 +7,9 @@ import {
   saveTheChildren,
   oxfam,
   cancerResearch,
+  brailleLiga,
+  deWarmsteWeek,
+  kinderarmoedefonds,
   acid,
   averageRob,
   floWindey,
@@ -57,6 +60,27 @@ const causes = [
     image: cancerResearch,
     likes: 123,
   },
+  {
+    title: "Braille Liga",
+    description:
+      "The Brailleliga is a Belgian association that helps blind and visually impaired people.",
+    image: brailleLiga,
+    likes: 56,
+  },
+  {
+    title: "De Warmste Week",
+    description:
+      "De Warmste Week is a charity event in Flanders, Belgium, organized by the public broadcaster VRT. It is held annually in the week before Christmas.",
+    image: deWarmsteWeek,
+    likes: 789,
+  },
+  {
+    title: "Kinderarmoedefonds",
+    description:
+      "The Kinderarmoedefonds is a Belgian charity that fights child poverty.",
+    image: kinderarmoedefonds,
+    likes: 23,
+  },
 ];
 
 const socials = [
@@ -79,7 +103,8 @@ const faq = [
       "A portion of the proceeds from every ticket sold goes towards supporting community causes that are chosen by players. Additionally, we will feature crazy video ideas linked to one or more causes, and players can vote for their favorite idea. At the end of the month, we will make the video using a famous influencer, and donate the profits from the game to the chosen cause(s). By playing the lottery, you can make a positive impact on your community and support causes that matter to you.",
   },
   {
-    question: "Is participating in the lottery a safe and responsible activity?",
+    question:
+      "Is participating in the lottery a safe and responsible activity?",
     answer:
       "Participating in the lottery can be a fun and entertaining activity, but it's important to approach it in a responsible way. We encourage all players to set limits on their spending, to know when to stop, and to seek help if they feel that gambling is becoming a problem. We also encourage players to support causes that align with their values and beliefs.",
   },
@@ -101,7 +126,7 @@ const faq = [
   },
 ];
 
-const exampleRanking = [
+const videoIdeas = [
   {
     title: "Plant 10.000 trees with the help of disabled people",
     cause: "WWF, Oxfam",
@@ -110,16 +135,16 @@ const exampleRanking = [
   },
   {
     title: "A thousand blind guiding dogs cuddling with orphans",
-    cause: "Make a Wish, Save the Children",
+    cause: "De warmste week",
     votes: 1167,
     collaborators: "Acid",
   },
   {
     title: "10.000 children have their own theme park for a day",
-    cause: "Make a Wish, Save the Children",
+    cause: "Kinderarmoedefonds",
     votes: 987,
     collaborators: "Flo Windey",
-  }
+  },
 ];
 
 const ranking = [
@@ -196,4 +221,4 @@ const collaborators = [
   },
 ];
 
-export { causes, socials, faq, exampleRanking, ranking, collaborators };
+export { causes, socials, faq, ranking, videoIdeas, collaborators };

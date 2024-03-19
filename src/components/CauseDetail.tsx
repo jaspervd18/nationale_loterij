@@ -1,5 +1,11 @@
 import { ArrowDown, ArrowUp } from "lucide-react";
-import { DrawerDescription, DrawerFooter, DrawerHeader } from "./ui/drawer";
+import {
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+} from "./ui/drawer";
 import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -13,8 +19,8 @@ interface CauseDetailProps {
 function CauseDetail({ title, description, image }: CauseDetailProps) {
   const navigate = useNavigate();
 
-  const [remainingPoints, setRemainingPoints] = useState<number>(56);
-  const [points, setPoints] = useState<number>(0);
+  const [remainingVotes, setRemainingVotes] = useState<number>(4);
+  const [votes, setVotes] = useState<number>(0);
   return (
     <>
       <div className="mx-auto w-full max-w-sm py-4">
@@ -22,24 +28,29 @@ function CauseDetail({ title, description, image }: CauseDetailProps) {
           <img src={image} className="h-3/4 mx-auto mb-0"></img>
           <DrawerDescription>{description}</DrawerDescription>
         </DrawerHeader>
+        <div className="">
+          <h3>
+            <span>It looks like your cause doesn't have any video ideas</span>
+            <Button variant={"secondary"}>Send your idea</Button>
+          </h3>
+        </div>
         <DrawerFooter>
           <p>
-            Remaining votes:{" "}
-            <span className="font-bold">{remainingPoints}</span>
+            Remaining votes: <span className="font-bold">{remainingVotes}</span>
           </p>
           <div className="flex gap-2 justify-between w-full">
             <div className="flex items-center border border-black rounded-sm w-4/12">
               <p className="w-7/12 text-center border-r border-black my-2">
-                {points}
+                {votes}
               </p>
               <div className="flex flex-col mx-auto ">
                 <span>
                   <ArrowUp
                     className="h-4 w-4 hover:cursor-pointer"
                     onClick={() => {
-                      if (remainingPoints < 5) return;
-                      setRemainingPoints(remainingPoints - 5);
-                      setPoints(points + 5);
+                      if (remainingVotes < 1) return;
+                      setRemainingVotes(remainingVotes - 1);
+                      setVotes(votes + 1);
                     }}
                   />
                 </span>
@@ -47,19 +58,18 @@ function CauseDetail({ title, description, image }: CauseDetailProps) {
                   <ArrowDown
                     className="h-4 w-4 hover:cursor-pointer"
                     onClick={() => {
-                      if (points <= 0) return;
-                      setRemainingPoints(remainingPoints + 5);
-                      setPoints(points - 5);
+                      if (votes <= 0) return;
+                      setRemainingVotes(remainingVotes + 1);
+                      setVotes(votes - 1);
                     }}
                   />
                 </span>
               </div>
             </div>
-
-            {points > 0 ? (
-              <Button onClick={() => navigate("/ranking")}>
-                I choose this community cause
-              </Button>
+            {votes > 0 ? (
+              <DrawerClose>
+                <Button>I choose this community cause</Button>
+              </DrawerClose>
             ) : (
               <Button disabled>I choose this community cause</Button>
             )}

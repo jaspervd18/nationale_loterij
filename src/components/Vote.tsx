@@ -1,27 +1,12 @@
-import { causes } from "@/constants";
+import { causes, videoIdeas } from "@/constants";
 import { Button } from "./ui/button";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTrigger,
-} from "./ui/drawer";
+import { Drawer, DrawerContent } from "./ui/drawer";
 import { useState } from "react";
-import { ArrowDown, ArrowUp, HeartIcon } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { Input } from "./ui/input";
-import { Badge } from "./ui/badge";
 import Marquee from "./Marquee";
 import CauseDetail from "./CauseDetail";
+import SearchBar from "./SearchBar";
+import CauseCard from "./CauseCard";
+import { Card } from "./ui/card";
 
 type Cause = {
   title: string;
@@ -35,87 +20,75 @@ function Vote() {
   return (
     <>
       <Drawer>
-        <DrawerContent>
-          <CauseDetail {...cause} />
-        </DrawerContent>
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-center">Choose your cause</h1>
-          <p className="text-center mt-8">
-            At the National Lottery, we believe in empowering our players to
-            make a difference in their communities. That's why we've made it
-            easier than ever to support the causes closest to your heart. When
-            you select a cause, your funding will go directly to that
-            organization, helping them to continue their important work. But
-            that's not all - we've also introduced an exciting new feature that
-            allows you to suggest a video idea linked to your chosen cause.
-            Imagine seeing your passion for your cause come to life in a real
-            video! Not only will you be making a tangible impact in your
-            community, but you'll also have the opportunity to showcase your
-            creativity and inspire others to get involved. So, what are you
-            waiting for? Join us in making a difference and bring your video
-            idea to life!
-          </p>
+        <h1 className="text-4xl font-semibold text-center">
+          You choose, we'll make it happen
+        </h1>
+        <p className="text-center mt-8">
+          At the National Lottery, we believe in empowering our players to make
+          a difference in their communities. That's why we've made it easier
+          than ever to support the causes closest to your heart. When you select
+          a cause, your funding will go directly to that organization, helping
+          them to continue their important work. But that's not all - we've also
+          introduced an exciting new feature that allows you to suggest a video
+          idea linked to your chosen cause. Imagine seeing your passion for your
+          cause come to life in a real video! Not only will you be making a
+          tangible impact in your community, but you'll also have the
+          opportunity to showcase your creativity and inspire others to get
+          involved. So, what are you waiting for? Join us in making a difference
+          and bring your video idea to life!
+        </p>
+        <div className="flex flex-col gap-2 mt-8">
+          {videoIdeas.map((videoIdea) => (
+            <Card className="flex items-center p-4">
+              <div className="w-2/12 text-base">{videoIdea.cause}</div>
+              <div className="w-8/12 text-lg font-semibold">
+                {videoIdea.title}{" "}
+                <span className="text-base font-light">
+                  with {videoIdea.collaborators}
+                </span>
+              </div>
+              <Button className="w-2/12 px-16 ">Vote</Button>
+            </Card>
+          ))}
+        </div>
+        <div className="flex flex-row items-center justify-center mt-4 mb-16">
+          <p>Have an idea?</p>
+          <Button variant={"link"} className="p-0 ml-2">
+            Request a video
+          </Button>
         </div>
         <Marquee fade={true}>
           {causes.map((cause) => (
             <img src={cause.image} className="h-16 rounded-sm ml-2"></img>
           ))}
         </Marquee>
-        <div className="flex flex-row gap-2 mt-16 items-end">
-          <Input
-            className="px-4 w-1/4 bg-white h-12"
-            placeholder="Search for a cause..."
-          />
-          <Badge className="h-fit py-2 hover:cursor-pointer">Charity</Badge>
-          <Badge className="h-fit py-2 hover:cursor-pointer">Education</Badge>
-          <Badge
-            className="h-fit py-2 hover:cursor-pointer"
-            variant={"outline"}
-          >
-            Healthcare
-          </Badge>
-          <Badge
-            className="h-fit py-2 hover:cursor-pointer"
-            variant={"outline"}
-          >
-            KMO
-          </Badge>
-          <Badge
-            className="h-fit py-2 hover:cursor-pointer"
-            variant={"outline"}
-          >
-            Sport
-          </Badge>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 mt-4">
-          {causes.map((cause, index) => (
-            <Card
-              className="shadow-md flex flex-col justify-between"
-              key={index}
-            >
-              <CardHeader>
-                <CardTitle className="flex justify-between">
-                  <span>{cause.title}</span>
-                  <span className="flex items-center text-xs font-light">
-                    {cause.likes}
-                    <HeartIcon className="h-4 w-4 ml-1 hover:cursor-pointer" />
-                  </span>
-                </CardTitle>
-                <CardDescription>{cause.description}</CardDescription>
-              </CardHeader>
-              <CardFooter className="flex justify-end">
-                <DrawerTrigger asChild>
-                  <Button
-                    className="px-16 py-4 sm:w-fit w-full"
-                    onClick={() => setCause(cause)}
-                  >
-                    Vote
-                  </Button>
-                </DrawerTrigger>
-              </CardFooter>
-            </Card>
+        <h2 className="text-2xl font-semibold mb-4 mt-16">
+          Don't see what you're looking for?
+        </h2>
+        <p className="">
+          If you're eager to vote for a cause but they don't have a video idea
+          that catches your eye, don't worry! You can still support them by
+          donating money and requesting a video idea. And, if you want to
+          explore other participating causes, you can do that too! Just browse
+          through the list of causes and find one that speaks to your heart.
+          Remember, every little bit helps and your donation will make a
+          difference. So go ahead, vote for a cause and help make a positive
+          impact on the world!
+        </p>
+        <SearchBar />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+          {causes.slice(0, 3).map((cause, index) => (
+            <CauseCard cause={cause} index={index} setCause={setCause} />
           ))}
         </div>
+        <div className="text-center mb-8">
+          <Button className="mx-auto mt-4" variant={"outline"}>
+            Show more causes
+          </Button>
+        </div>
+        <DrawerContent>
+          <CauseDetail {...cause} />
+        </DrawerContent>
       </Drawer>
     </>
   );
