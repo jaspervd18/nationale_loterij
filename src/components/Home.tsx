@@ -8,11 +8,10 @@ import Videos from "./Videos";
 function Home() {
   return (
     <>
-      
       <Videos />
       <Separator className="my-16" />
       <Steps />
-      <Separator className="my-16"/>
+      <Separator className="my-16" />
       <Collaborators />
       <Separator className="my-16" />
       <FAQ />

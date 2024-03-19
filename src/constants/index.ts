@@ -5,7 +5,6 @@ import {
   makeAWish,
   unicef,
   saveTheChildren,
-  redCross,
   oxfam,
   cancerResearch,
   acid,
@@ -43,13 +42,6 @@ const causes = [
       "The Save the Children Fund, commonly known as Save the Children, is an international non-governmental organization that promotes children's rights, provides relief and helps support children in developing countries.",
     image: saveTheChildren,
     likes: 98,
-  },
-  {
-    title: "Red Cross",
-    description:
-      "The International Red Cross and Red Crescent Movement is an international humanitarian movement with approximately 97 million volunteers, members and staff worldwide.",
-    image: redCross,
-    likes: 102,
   },
   {
     title: "Oxfam",
@@ -108,6 +100,7 @@ const faq = [
       "We regularly update our website and social media channels with information about the community causes that are being supported. You can also check your local news sources to find out about the impact that lottery proceeds are having in your community. Additionally, we will feature crazy video ideas linked to one or more causes, and players can vote for their favorite idea. At the end of the month, we will make the video using a famous influencer, and donate the profits from the game to the chosen cause(s).",
   },
 ];
+
 const exampleRanking = [
   {
     title: "Plant 10.000 trees with the help of disabled people",
