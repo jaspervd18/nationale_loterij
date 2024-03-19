@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 function Videos() {
   return (
     <>
-      <h1 className="text-4xl font-semibold text-center mt-8 mb-8">
+      <h1 className="text-4xl font-semibold text-center mb-8">
         Watch some of our crazy videos
       </h1>
       <div className="flex flex-row gap-4 justify-center">
