@@ -25,7 +25,7 @@ function VideoRanking() {
               <p className="text-center">{user.votes}</p>
             </div>
           ))}
-        <div className="bg-gray-50 flex justify-between py-1 px-24 hover:scale-105 transition duration-300 ease-in-out">
+        <div className="bg-gray-50 flex justify-between py-1 px-24 hover:scale-105 transition duration-300 ease-in-out rounded-b-sm">
           <p className="text-center">...</p>
           <p className="text-center">...</p>
           <p className="text-center">...</p>
