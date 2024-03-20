@@ -142,7 +142,7 @@ const videoIdeas = [
   {
     title: "10.000 children have their own theme park for a day",
     cause: "Kinderarmoedefonds",
-    votes: 987,
+    votes: 2212,
     collaborators: "Gloria Monserez",
   },
   {

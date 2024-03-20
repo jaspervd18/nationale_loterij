@@ -15,10 +15,12 @@ function Ranking() {
       <div>
         <h1 className="text-4xl font-semibold">Monthly ranking</h1>
         <p className="mt-8 w-8/12">
-          Increase your chances at winning some of our amazing prizes by
-          participating in our community causes and earning points. The more
-          points you earn, the higher you'll rank on our monthly leaderboard.
-          Good luck!
+          Join our community and vote for your favorite causes to help make a
+          difference! By voting, you'll have the chance to be featured in a cool
+          video at the end of the month and even be invited to participate in
+          our video shoots. So come and be a part of something meaningful and
+          impactful, and take the first step towards making a positive change in
+          the world!
         </p>
       </div>
       <div className="flex gap-4 mt-8">
@@ -26,7 +28,7 @@ function Ranking() {
           <VideoRanking />
         </div>
         <div className="w-4/12">
-            <Countdown targetDate={targetDate} />
+          <Countdown targetDate={targetDate} />
         </div>
       </div>
       <Separator className="my-16" />

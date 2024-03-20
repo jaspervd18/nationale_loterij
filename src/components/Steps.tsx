@@ -93,8 +93,8 @@ function Steps() {
               </div>
               <div className="flex flex-col">
                 {videoIdeas
-                  .slice(0, 3)
                   .sort((u1, u2) => u2.votes - u1.votes)
+                  .slice(0, 3)
                   .map((user, index) => (
                     <div
                       key={index}
