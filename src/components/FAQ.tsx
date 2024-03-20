@@ -15,7 +15,7 @@ function FAQ() {
           return (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
+              <AccordionContent className="w-8/12">{item.answer}</AccordionContent>
             </AccordionItem>
           );
         })}

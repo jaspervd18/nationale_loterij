@@ -20,10 +20,10 @@ function Vote() {
   return (
     <>
       <Drawer>
-        <h1 className="text-4xl font-semibold text-center">
+        <h1 className="text-4xl font-semibold">
           You choose, we'll make it happen
         </h1>
-        <p className="text-center mt-8">
+        <p className="mt-8 w-8/12">
           At the National Lottery, we believe in empowering our players to make
           a difference in their communities. That's why we've made it easier
           than ever to support the causes closest to your heart. When you select
@@ -65,7 +65,7 @@ function Vote() {
         <h2 className="text-2xl font-semibold mb-4 mt-16">
           Don't see what you're looking for?
         </h2>
-        <p className="">
+        <p className="w-8/12">
           If you're eager to vote for a cause but they don't have a video idea
           that catches your eye, don't worry! You can still support them by
           donating money and requesting a video idea. And, if you want to
