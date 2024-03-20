@@ -147,56 +147,33 @@ const videoIdeas = [
   },
 ];
 
-const ranking = [
+const goals = [
   {
-    name: "John Doe",
-    amount: 100,
+    title: "Donation Goal",
+    description: "Track your progress towards a donation goal for your chosen cause.",
+    progress: 0.65
   },
   {
-    name: "Jane Smith",
-    amount: 75,
+    title: "Video Idea Requests",
+    description: "Track the number of video idea requests you've made.",
+    progress: 0.25
   },
   {
-    name: "Robert Johnson",
-    amount: 50,
+    title: "Votes Cast",
+    description: "Track the number of votes you've cast for your favorite cause's video idea.",
+    progress: 0.9
   },
   {
-    name: "Emily Davis",
-    amount: 25,
+    title: "Social Sharing",
+    description: "Track the number of times you've shared the campaign on social media.",
+    progress: 0.5
   },
   {
-    name: "Michael Brown",
-    amount: 10,
-  },
-  {
-    name: "Olivia Wilson",
-    amount: 354,
-  },
-  {
-    name: "William Taylor",
-    amount: 212,
-  },
-  {
-    name: "Sophia Martinez",
-    amount: 123,
-  },
-  {
-    name: "James Anderson",
-    amount: 76,
-  },
-  {
-    name: "Isabella Thomas",
-    amount: 32,
-  },
-  {
-    name: "David Hernandez",
-    amount: 12,
-  },
-  {
-    name: "Mia Lopez",
-    amount: 5,
-  },
-];
+    title: "Referrals",
+    description: "Track the number of people you've referred to the campaign.",
+    progress: 0.1
+  }
+]
 
 const collaborators = [
   {
@@ -221,4 +198,4 @@ const collaborators = [
   },
 ];
 
-export { causes, socials, faq, ranking, videoIdeas, collaborators };
+export { causes, socials, faq, goals, videoIdeas, collaborators };
