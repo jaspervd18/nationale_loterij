@@ -5,7 +5,7 @@ import {
   BadgeIndianRupee,
   BadgePlus,
 } from "lucide-react";
-import { Card, CardContent, CardTitle } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import { goals } from "@/constants";
 
 function Achievements() {

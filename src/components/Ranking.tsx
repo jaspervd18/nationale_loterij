@@ -1,8 +1,6 @@
 import Countdown from "./Countdown";
 import Achievements from "./Achievements";
 import VideoRanking from "./VideoRanking";
-import { Card, CardTitle } from "./ui/card";
-import { goals } from "@/constants";
 import { Separator } from "./ui/separator";
 
 function Ranking() {
