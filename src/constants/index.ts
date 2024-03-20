@@ -134,7 +134,7 @@ const videoIdeas = [
     collaborators: "Average Rob",
   },
   {
-    title: "A thousand blind guiding dogs cuddling with orphans",
+    title: "A thousand blind guiding dogs cuddling with a thousand orphans",
     cause: "De warmste week",
     votes: 1167,
     collaborators: "Acid",
@@ -143,8 +143,20 @@ const videoIdeas = [
     title: "10.000 children have their own theme park for a day",
     cause: "Kinderarmoedefonds",
     votes: 987,
-    collaborators: "Flo Windey",
+    collaborators: "Gloria Monserez",
   },
+  {
+    title: "Running a marathon with 100 amputees",
+    cause: "GoedeDoelStappers",
+    votes: 1530,
+    collaborators: "Arno The Kid",
+  },
+  {
+    title: "Visiting Rock Werchter with 500 deaf people",
+    cause: "Doof Vlaanderen vzw",
+    votes: 2450,
+    collaborators: "Flo Windey",
+  }
 ];
 
 const goals = [
