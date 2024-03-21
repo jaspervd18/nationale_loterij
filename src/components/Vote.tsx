@@ -20,10 +20,10 @@ function Vote() {
   return (
     <>
       <Drawer>
-        <h1 className="text-4xl font-semibold">
+        <h1 className="text-2xl md:text-4xl font-semibold">
           You choose, we'll make it happen
         </h1>
-        <p className="mt-8 w-8/12">
+        <p className="mt-8 md:w-8/12">
           At the National Lottery, we believe in empowering our players to make
           a difference in their communities. That's why we've made it easier
           than ever to support the causes closest to your heart. When you select
@@ -39,15 +39,17 @@ function Vote() {
         </p>
         <div className="flex flex-col gap-2 mt-8">
           {videoIdeas.map((videoIdea) => (
-            <Card className="flex items-center p-4">
-              <div className="w-2/12 text-base">{videoIdea.cause}</div>
-              <div className="w-8/12 text-lg font-semibold">
+            <Card className="flex max-md:flex-col md:flex-row items-center p-4 max-md:gap-4">
+              <div className="md:w-2/12 text-lg md:text-base">
+                {videoIdea.cause}
+              </div>
+              <div className="md:w-8/12 text-md md:text-lg font-semibold">
                 {videoIdea.title}{" "}
                 <span className="text-base font-light">
                   with {videoIdea.collaborators}
                 </span>
               </div>
-              <Button className="w-2/12 px-16 ">Vote</Button>
+              <Button className="w-full md:w-2/12 px-16 ">Vote</Button>
             </Card>
           ))}
         </div>
@@ -65,7 +67,7 @@ function Vote() {
         <h2 className="text-2xl font-semibold mb-4 mt-16">
           Don't see what you're looking for?
         </h2>
-        <p className="w-8/12">
+        <p className="md:w-8/12">
           If you're eager to vote for a cause but they don't have a video idea
           that catches your eye, don't worry! You can still support them by
           donating money and requesting a video idea. And, if you want to
