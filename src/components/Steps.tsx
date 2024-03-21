@@ -46,7 +46,7 @@ function Steps() {
             <CardHeader className="text-center">
               <CardTitle>Remaining votes</CardTitle>
             </CardHeader>
-            <CardContent className="text-9xl font-bold text-center">
+            <CardContent className="text-6xl md:text-9xl font-bold text-center">
               {remaingingVotes}
             </CardContent>
             <CardFooter className="flex flex-col">

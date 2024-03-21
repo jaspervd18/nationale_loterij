@@ -39,23 +39,25 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   return (
     <>
       <Card className="flex flex-col shadow-md">
-        <CardTitle className="text-center my-6">Remaining time</CardTitle>
+        <CardTitle className="text-center my-2 md:my-6 max-md:text-lg">
+          Remaining time
+        </CardTitle>
         <CardContent>
           <div className="flex flex-row gap-2 justify-around text-center">
             <div className="flex flex-col gap-2 w-16">
-              <p className="text-5xl font-semibold">
+              <p className="text-3xl md:text-5xl font-semibold">
                 {timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}
               </p>
               <p className="text-sm font-light">days</p>
             </div>
             <div className="flex flex-col gap-2 w-16">
-              <p className="text-5xl font-semibold">
+              <p className="text-3xl md:text-5xl font-semibold">
                 {timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours}
               </p>
               <p className="text-sm font-light">hours</p>
             </div>
             <div className="flex flex-col gap-2 w-16">
-              <p className="text-5xl font-semibold">
+              <p className="text-3xl md:text-5xl font-semibold">
                 {timeLeft.minutes < 10
                   ? `0${timeLeft.minutes}`
                   : timeLeft.minutes}
@@ -63,7 +65,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
               <p className="text-sm font-light">minutes</p>
             </div>
             <div className="flex flex-col gap-2 w-16">
-              <p className="text-5xl font-semibold">
+              <p className="text-3xl md:text-5xl font-semibold">
                 {timeLeft.seconds < 10
                   ? `0${timeLeft.seconds}`
                   : timeLeft.seconds}

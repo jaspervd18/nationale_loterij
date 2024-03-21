@@ -13,8 +13,8 @@ function Ranking() {
   return (
     <>
       <div>
-        <h1 className="text-4xl font-semibold">Monthly ranking</h1>
-        <p className="mt-8 w-8/12">
+        <h1 className="text-2xl md:text-4xl font-semibold">Monthly ranking</h1>
+        <p className="mt-4 md:mt-8 md:w-8/12">
           Join our community and vote for your favorite causes to help make a
           difference! By voting, you'll have the chance to be featured in a cool
           video at the end of the month and even be invited to participate in
@@ -23,15 +23,15 @@ function Ranking() {
           the world!
         </p>
       </div>
-      <div className="flex gap-4 mt-8">
-        <div className="shadow-lg rounded-sm w-8/12">
+      <div className="flex max-md:flex-col-reverse gap-4 mt-8">
+        <div className="shadow-lg rounded-sm w-full md:w-8/12">
           <VideoRanking />
         </div>
-        <div className="w-4/12">
+        <div className="w-full md:w-4/12">
           <Countdown targetDate={targetDate} />
         </div>
       </div>
-      <Separator className="my-16" />
+      <Separator className="my-8 md:my-16" />
       <Achievements />
     </>
   );

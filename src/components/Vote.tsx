@@ -49,7 +49,9 @@ function Vote() {
                   with {videoIdea.collaborators}
                 </span>
               </div>
-              <Button className="w-full md:w-2/12 px-16 ">Vote</Button>
+              <Button className="w-full md:w-2/12 px-16 md:text-lg">
+                Vote
+              </Button>
             </Card>
           ))}
         </div>
