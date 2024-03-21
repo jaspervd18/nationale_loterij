@@ -9,13 +9,19 @@ import {
 function FAQ() {
   return (
     <>
-      <h2 className="text-4xl font-semibold mb-4">Frequently asked questions</h2>
+      <h2 className="md:text-4xl text-2xl font-semibold mb-4">
+        Frequently asked questions
+      </h2>
       <Accordion type="single" collapsible>
         {faq.map((item, index) => {
           return (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent className="w-8/12">{item.answer}</AccordionContent>
+              <AccordionTrigger className="text-left">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="md:w-8/12">
+                {item.answer}
+              </AccordionContent>
             </AccordionItem>
           );
         })}

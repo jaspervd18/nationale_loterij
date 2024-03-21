@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <div className="bg-slate-50">
-        <div className="container py-8 grow px-16">
+        <div className="container py-8 grow md:px-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />

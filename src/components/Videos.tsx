@@ -3,30 +3,30 @@ import { Button } from "./ui/button";
 function Videos() {
   return (
     <>
-      <h1 className="text-4xl font-semibold mb-4">Watch some of our crazy videos</h1>
-      <div className="flex flex-row gap-4 justify-between mt-8">
+      <h1 className="text-2xl md:text-4xl font-semibold mb-4">
+        Watch some of our crazy videos
+      </h1>
+      <div className="flex max-md:flex-col md:flex-row gap-4 justify-between mt-8">
         <iframe
-          height={350}
-          width={620}
           src="https://www.youtube.com/embed/6x_b11Kyrco"
           title="We Adopted an Orphanage"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
+          className="w-full md:w-1/2 h-48 md:h-80"
         ></iframe>
         <iframe
-          height={350}
-          width={620}
           src="https://www.youtube.com/embed/l5PvwYZQtT8?si=R3q1wcbF-PP4RErU"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
           allowFullScreen
+          className="w-full md:w-1/2 h-48 md:h-80"
         ></iframe>
       </div>
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibolds mt-8">
+        <h2 className="md:text-2xl text-xl font-semibolds mt-8">
           Your Input Matters: Request Your Own Video
         </h2>
-        <p className="w-8/12">
+        <p className="md:w-8/12">
           At the National Lottery, we always strive to put our players first.
           That's why we are excited to announce a new feature that lets you
           request your own video. With our "Request Your Own Video" feature, you

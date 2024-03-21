@@ -20,10 +20,12 @@ function Steps() {
 
   return (
     <>
-      <h1 className="text-4xl font-semibold mb-4">How does it work?</h1>
-      <div className="flex flex-row gap-4">
+      <h1 className="md:text-4xl text-2xl font-semibold mb-4">
+        How does it work?
+      </h1>
+      <div className="flex flex-col md:flex-row gap-4">
         <div>
-          <h2 className="font-semibold text-xl text-black mb-4">
+          <h2 className="font-semibold text-lg md:text-xl text-black mb-4">
             <span className="inline border-b-4 border-primary pb-1">
               Step 1.
             </span>{" "}
@@ -34,7 +36,7 @@ function Steps() {
           </div>
         </div>
         <div>
-          <h2 className="font-semibold text-xl text-black mb-4">
+          <h2 className="font-semibold text-lg md:text-xl text-black mb-4">
             <span className="inline border-b-4 border-primary pb-1">
               Step 2.
             </span>{" "}
@@ -54,7 +56,7 @@ function Steps() {
                 className="mb-2 h-12"
               />
               <Button
-                className="w-full py-4"
+                className="w-full py-4 overflow-auto"
                 onClick={() => setRemainingVotes(remaingingVotes + 1)}
               >
                 I am 18 or older and have read the terms and conditions
@@ -64,13 +66,13 @@ function Steps() {
         </div>
       </div>
       <div className="w-full mt-8">
-        <h2 className="font-semibold text-xl text-black mb-4">
+        <h2 className="font-semibold text-lg md:text-xl text-black mb-4">
           <span className="inline border-b-4 border-primary pb-1">Step 3.</span>{" "}
           Vote for your cause
         </h2>
-        <Card className="shadow-md px-4 py-4 pb-0">
-          <CardContent className="flex gap-4">
-            <div className="flex flex-col gap-4 w-5/12 justify-between">
+        <Card className="shadow-md md:p-4 py-2 pb-0">
+          <CardContent className="flex max-md:flex-col md:flex-row gap-4">
+            <div className="flex flex-col gap-4 md:w-5/12 justify-between">
               <p>
                 Choose a cause that you'd like to support. The more votes a
                 cause gets, the more likely we will make a crazy video about it.
@@ -79,14 +81,14 @@ function Steps() {
                 idea that we'll bring to life.
               </p>
               <Button
-                className="w-full py-6 px-8 text-2xl"
+                className="w-full py-6 px-8 text-lg md:text-2xl"
                 onClick={() => navigate("/vote")}
               >
                 Vote now
               </Button>
             </div>
             <div className="shadow-md rounded-sm w-full">
-              <div className="flex justify-between px-24 font-semibold py-3 rounded-t-sm border-b border-primary bg-primary text-white">
+              <div className="flex justify-between px-2 md:px-24 font-semibold py-3 rounded-t-sm border-b border-primary bg-primary text-white">
                 <p>Rank</p>
                 <p>Video</p>
                 <p>Votes</p>
@@ -95,20 +97,22 @@ function Steps() {
                 {videoIdeas
                   .sort((u1, u2) => u2.votes - u1.votes)
                   .slice(0, 3)
-                  .map((user, index) => (
+                  .map((video, index) => (
                     <div
                       key={index}
                       className={cn(
                         index % 2 == 0 ? "bg-gray-50" : "bg-white",
-                        "flex justify-between py-2 px-24 hover:scale-105 transition duration-300 ease-in-out"
+                        "flex justify-between py-2 px-2 md:px-24 hover:scale-105 transition duration-300 ease-in-out h-16 md:h-12"
                       )}
                     >
                       <p className="text-center font-bold">{index + 1}</p>
-                      <p className="text-center">{user.title}</p>
-                      <p className="text-center">{user.votes}</p>
+                      <p className="text-center max-md:w-1/2 overflow-y-hidden">
+                        {video.title}
+                      </p>
+                      <p className="text-center">{video.votes}</p>
                     </div>
                   ))}
-                <div className="bg-whit flex justify-between py-1 px-24 hover:scale-105 transition duration-300 ease-in-out">
+                <div className="bg-whit flex justify-between py-1 px-2 md:px-24 hover:scale-105 transition duration-300 ease-in-out">
                   <p className="text-center">...</p>
                   <p className="text-center">...</p>
                   <p className="text-center">...</p>
