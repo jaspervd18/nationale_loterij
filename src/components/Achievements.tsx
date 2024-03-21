@@ -10,7 +10,9 @@ import { goals } from "@/constants";
 function Achievements() {
   return (
     <>
-      <h1 className="text-4xl font-semibold mb-8">My personal contributions</h1>
+      <h1 className="text-2xl md:text-4xl font-semibold mb-8">
+        My personal contributions
+      </h1>
       <div className="space-y-4">
         {goals.map((goal) => (
           <div className="flex flex-col justify-start">
