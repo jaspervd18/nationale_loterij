@@ -21,7 +21,7 @@ function VideoRanking() {
               )}
             >
               <p className="text-center font-bold">{index + 1}</p>
-              <p className="text-center w-1/2">{user.title}</p>
+              <p className="text-center max-md:w-1/2">{user.title}</p>
               <p className="text-center">{user.votes}</p>
             </div>
           ))}

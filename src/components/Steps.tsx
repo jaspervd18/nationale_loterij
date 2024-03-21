@@ -23,7 +23,7 @@ function Steps() {
       <h1 className="md:text-4xl text-2xl font-semibold mb-4">
         How does it work?
       </h1>
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex max-md:flex-col md:flex-row gap-4">
         <div>
           <h2 className="font-semibold text-lg md:text-xl text-black mb-4">
             <span className="inline border-b-4 border-primary pb-1">
@@ -56,7 +56,7 @@ function Steps() {
                 className="mb-2 h-12"
               />
               <Button
-                className="w-full py-4 overflow-auto"
+                className="w-full py-4"
                 onClick={() => setRemainingVotes(remaingingVotes + 1)}
               >
                 I am 18 or older and have read the terms and conditions
